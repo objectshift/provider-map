@@ -1,4 +1,33 @@
 {
   "version": 1,
-  "packages": []
+  "packages": [
+    {
+      "id": "quickscan",
+      "name": "QuickScan",
+      "profile": "fast",
+      "description": "Fast multi-source search with smaller result windows.",
+      "url": "https://raw.githubusercontent.com/objectshift/provider-map/main/packages/quickscan.json"
+    },
+    {
+      "id": "deepscan",
+      "name": "DeepScan",
+      "profile": "expanded",
+      "description": "Broader multi-source search with larger result windows.",
+      "url": "https://raw.githubusercontent.com/objectshift/provider-map/main/packages/deepscan.json"
+    },
+    {
+      "id": "spanish",
+      "name": "Spanish",
+      "profile": "spanish",
+      "description": "Spanish-focused source search with Spanish and Latino results prioritized.",
+      "url": "https://raw.githubusercontent.com/objectshift/provider-map/main/packages/spanish.json"
+    },
+    {
+      "id": "southasian",
+      "name": "South Asian",
+      "profile": "south_asian",
+      "description": "South Asian-focused source search with Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, Punjabi, Marathi, Gujarati, Bhojpuri, Nepali, and Urdu prioritized.",
+      "url": "https://raw.githubusercontent.com/objectshift/provider-map/main/packages/southasian.json"
+    }
+  ]
 }
