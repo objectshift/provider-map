@@ -1,0 +1,47 @@
+{
+  "name": "South Asian",
+  "version": 1,
+  "profile": "south_asian",
+  "description": "South Asian-focused source search with Hindi, Tamil, Telugu, Malayalam, Kannada, Bengali, Punjabi, Marathi, Gujarati, Bhojpuri, Nepali, and Urdu prioritized.",
+  "scrapers": [
+    {
+      "name": "MediaFusion",
+      "itemType": "info_hash",
+      "infoHashTargetKey": "infoHash",
+      "jsonResultsKey": "streams",
+      "torrentNameTargetKey": "behaviorHints.filename",
+      "sizeAttr": "behaviorHints.videoSize",
+      "searchPattern": {
+        "movie": "movie/%imdbId",
+        "tv": "series/%imdbId:%season:%episode"
+      },
+      "url": "https://mediafusionfortheweebs.midnightignite.me/D-Z3ddaY6ALiN1pv2DfD085WxYSDT4yvHr28B0POvFoyV5cAN6o59xcoIhZ1atBpDBv0yrtVMy_1Gy7FtIQTEO5QV1qZipEMLCEppZ_pJEEdc4Ktz4CoPwT975W4aHVwv3GUdxO3zECmtWRWqKzfdybquiEcQCFLHpQ3xUIKXAXJy_yQFfrEDHv3a7T413SElpotWlK9aZuxSd_NbJKSvsLoyTCvaAw7XmhFHCHzoTwPBJh_S-1lcrT011gjaXuge8SeVycXeOzfZ4ZIsgywdOPZ0IkMIH4XR9RhaQ1KvjdLCQwQTVrtGlL3VYNjrql0Jg9hu0R3c8mzttdulci4PCdd_wzty2mHReqvGEr56B8puBaPtzqTL0lyBYPmwem91JJraaFtDYuQoUf6H-KgSztqCePNH2JQQMxUGfJkQ8t30NpzD6ZzNpbnLjR2am2YO4/stream/%searchPattern.json"
+    },
+    {
+      "name": "Torrentio",
+      "itemType": "info_hash",
+      "infoHashTargetKey": "infoHash",
+      "jsonResultsKey": "streams",
+      "torrentNameTargetKey": "title",
+      "sizePattern": "\\s*([\\d.]+)\\s*(GB|MB)",
+      "searchPattern": {
+        "movie": "movie/%imdbId",
+        "tv": "series/%imdbId:%season:%episode"
+      },
+      "url": "https://torrentio.strem.fun/sort=qualitysize|limit=40/stream/%searchPattern.json"
+    },
+    {
+      "name": "StremThru",
+      "itemType": "info_hash",
+      "infoHashTargetKey": "infoHash",
+      "jsonResultsKey": "streams",
+      "torrentNameTargetKey": "behaviorHints.filename",
+      "sizeAttr": "behaviorHints.videoSize",
+      "searchPattern": {
+        "movie": "movie/%imdbId",
+        "tv": "series/%imdbId:%season:%episode"
+      },
+      "url": "https://stremthru.13377001.xyz/stremio/torz/eyJpbmRleGVycyI6bnVsbCwic3RvcmVzIjpbeyJjIjoicDJwIiwidCI6IiJ9XSwiZmlsdGVyIjoiR3JvdXAgIT0gXCJYWFhcIiAmJiBTZWVkZXJzID49IDEifQ/stream/%searchPattern.json"
+    }
+  ]
+}
