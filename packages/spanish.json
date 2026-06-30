@@ -1,0 +1,59 @@
+{
+  "name": "Spanish",
+  "version": 1,
+  "profile": "spanish",
+  "description": "Spanish-focused source search with Spanish and Latino results prioritized.",
+  "scrapers": [
+    {
+      "name": "Peerflix",
+      "itemType": "info_hash",
+      "infoHashTargetKey": "infoHash",
+      "jsonResultsKey": "streams",
+      "torrentNameTargetKey": "description",
+      "sizeAttr": "sizebytes",
+      "searchPattern": {
+        "movie": "movie/%imdbId",
+        "tv": "series/%imdbId:%season:%episode"
+      },
+      "url": "https://peerflix.mov/stream/%searchPattern.json"
+    },
+    {
+      "name": "Zilean",
+      "itemType": "info_hash",
+      "infoHashTargetKey": "info_hash",
+      "torrentNameTargetKey": "raw_title",
+      "sizeAttr": "size",
+      "searchPattern": {
+        "movie": "ImdbId=%imdbId&Year=%year",
+        "tv": "ImdbId=%imdbId&Season=%season&Episode=%episode"
+      },
+      "url": "https://zilean.elfhosted.com/dmm/filtered?%searchPattern"
+    },
+    {
+      "name": "MediaFusion",
+      "itemType": "info_hash",
+      "infoHashTargetKey": "infoHash",
+      "jsonResultsKey": "streams",
+      "torrentNameTargetKey": "behaviorHints.filename",
+      "sizeAttr": "behaviorHints.videoSize",
+      "searchPattern": {
+        "movie": "movie/%imdbId",
+        "tv": "series/%imdbId:%season:%episode"
+      },
+      "url": "https://mediafusionfortheweebs.midnightignite.me/D-JPvIuKwsA1sBdMqJrgdigrSijHgK-0iPFtcEWjxh3SkxJT9CBeBEe-x_6L2Wzq1Y2QMZAU5utS8zQXp0D87S9oYmpxsu0W8hmo6nLgL04gIIn0slsbVJGOvl-d4m0824DUVBT6-yaQUINwGsjXi1HVGoSlYORTnELV9qsNEAK9LXtMWLUrYXVCg3Z4LJR7CLh3qHqc1uJ0fyC_D-H4HwwGsE1_sGfzAeSM194HwHI9e2YcM0R249Z-OkBLPuRSz3Csa8-JP04wjsVeyfNHX3kBU0IRWiRMOYhOd2fWKNO2p_DwAEDirk11jqSs6X05YXM4wp-fzZaMfYkZutSQ4N1cG_ocH7v5wmrvdSsQ8CSNgSxLIHGtCKNruCurbYimKeS4K4dY4Ysdx98RA9QLiC1ZjdPNcejEO5uveYX7NHbsa3B8FHfN20fNuIUYC0koQg/stream/%searchPattern.json"
+    },
+    {
+      "name": "Torrentio",
+      "itemType": "info_hash",
+      "infoHashTargetKey": "infoHash",
+      "jsonResultsKey": "streams",
+      "torrentNameTargetKey": "title",
+      "sizePattern": "\\s*([\\d.]+)\\s*(GB|MB)",
+      "searchPattern": {
+        "movie": "movie/%imdbId",
+        "tv": "series/%imdbId:%season:%episode"
+      },
+      "url": "https://torrentio.strem.fun/sort=qualitysize|limit=12/stream/%searchPattern.json"
+    }
+  ]
+}
