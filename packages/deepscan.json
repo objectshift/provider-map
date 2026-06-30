@@ -1,0 +1,47 @@
+{
+  "name": "DeepScan",
+  "version": 1,
+  "profile": "expanded",
+  "description": "Broader multi-source search with larger result windows.",
+  "scrapers": [
+    {
+      "name": "Torrentio",
+      "itemType": "info_hash",
+      "infoHashTargetKey": "infoHash",
+      "jsonResultsKey": "streams",
+      "torrentNameTargetKey": "title",
+      "sizePattern": "\\s*([\\d.]+)\\s*(GB|MB)",
+      "searchPattern": {
+        "movie": "movie/%imdbId",
+        "tv": "series/%imdbId:%season:%episode"
+      },
+      "url": "https://torrentio.strem.fun/sort=qualitysize|limit=50/stream/%searchPattern.json"
+    },
+    {
+      "name": "MediaFusion",
+      "itemType": "info_hash",
+      "infoHashTargetKey": "infoHash",
+      "jsonResultsKey": "streams",
+      "torrentNameTargetKey": "behaviorHints.filename",
+      "sizeAttr": "behaviorHints.videoSize",
+      "searchPattern": {
+        "movie": "movie/%imdbId",
+        "tv": "series/%imdbId:%season:%episode"
+      },
+      "url": "https://mediafusionfortheweebs.midnightignite.me/D-xJdJ01NNllLF2jmE-QP_78_ptmuhgFsiwywLZNhVNcChMaK0Ca7Cr1XDT6sEWK-G8vx0ZJ6G_Tfx5o8su96Pkau2fTz4sKBeGNJrJ7V9j2JiO01IYWb8_QDM1vaRygJqbSrwG56kdtni2KNprS3j7prXROAi6LJpS_au6c0nyxsxXUWccUdx6lZQkzLfKFtinwU6LW7E2KopB6nwrp_gLA/stream/%searchPattern.json"
+    },
+    {
+      "name": "StremThru",
+      "itemType": "info_hash",
+      "infoHashTargetKey": "infoHash",
+      "jsonResultsKey": "streams",
+      "torrentNameTargetKey": "behaviorHints.filename",
+      "sizeAttr": "behaviorHints.videoSize",
+      "searchPattern": {
+        "movie": "movie/%imdbId",
+        "tv": "series/%imdbId:%season:%episode"
+      },
+      "url": "https://stremthru.13377001.xyz/stremio/torz/eyJpbmRleGVycyI6bnVsbCwic3RvcmVzIjpbeyJjIjoicDJwIiwidCI6IiJ9XSwiZmlsdGVyIjoiR3JvdXAgIT0gXCJYWFhcIiJ9/stream/%searchPattern.json"
+    }
+  ]
+}
